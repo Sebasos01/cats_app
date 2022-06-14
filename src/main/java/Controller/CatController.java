@@ -15,7 +15,7 @@ public class CatController {
     private final static String BASE_URL = "https://api.thecatapi.com/v1/";
     private final static String SEARCH_ENDPOINT = BASE_URL+"images/search";
     private final static String FAVORITE_ENDPOINT = BASE_URL+"favourites";
-    private final static String KEY_PATH = "/home/socub/IdeaProjects/cats_app/.idea/Key";
+    private final static String KEY_PATH = "";
     private final static APIConnection api = APIConnection.getInstance();
     private final static Gson serializer = new Gson();
 
