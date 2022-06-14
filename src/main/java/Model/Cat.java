@@ -5,7 +5,6 @@ import javax.swing.*;
 public class Cat {
     String id;
     String url;
-    String apiKey;
     ImageIcon image;
 
     public String  getId() {
@@ -14,10 +13,6 @@ public class Cat {
 
     public String getUrl() {
         return url;
-    }
-
-    public String getApiKey() {
-        return apiKey;
     }
 
     public ImageIcon getImage() {

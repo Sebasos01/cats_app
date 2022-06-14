@@ -25,8 +25,8 @@ public class APIConnection {
         return client.newCall(request).execute();
     }
 
-    public Response sendPostRequest(String fUrl, String jsonBody, String apiKey) throws IOException {
-        RequestBody body = RequestBody.create(mediaType, jsonBody);
+    public Response sendPostRequest(String fUrl, String rBody, String apiKey) throws IOException {
+        RequestBody body = RequestBody.create(mediaType, rBody);
         Request request = new Request.Builder()
                 .url(fUrl)
                 .method("POST", body)
