@@ -60,7 +60,7 @@
       <recent name="$PROJECT_DIR$/.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StrongAES">
+  <component name="RunManager" selected="Application.View.Main">
     <configuration name="StrongAES" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PersonalUtils.StrongAES" />
       <module name="cats_app" />
@@ -83,8 +83,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StrongAES" />
         <item itemvalue="Application.View.Main" />
+        <item itemvalue="Application.StrongAES" />
       </list>
     </recent_temporary>
   </component>

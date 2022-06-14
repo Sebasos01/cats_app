@@ -40,4 +40,3 @@ build/
 
 .idea/Key
 src/main/java/PersonalUtils/StrongAES.java
-src/main/java/PersonalUtils/ByteArrayUtils.java
