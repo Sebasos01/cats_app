@@ -25,6 +25,16 @@ public class APIConnection {
         return client.newCall(request).execute();
     }
 
+    public Response sendGetRequest2(String rUrl, String apiKey) throws IOException {
+        RequestBody body = RequestBody.create(mediaType, "");
+        Request request = new Request.Builder()
+                .url(rUrl)
+                .get()
+                .addHeader("x-api-key", apiKey)
+                .build();
+        return  client.newCall(request).execute();
+    }
+
     public Response sendPostRequest(String fUrl, String rBody, String apiKey) throws IOException {
         RequestBody body = RequestBody.create(mediaType, rBody);
         Request request = new Request.Builder()

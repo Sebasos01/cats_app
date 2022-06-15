@@ -2,8 +2,11 @@ package Service;
 
 import Controller.CatController;
 import Model.Cat;
+import Model.FavCat;
+import PersonalUtils.NumericalUtils;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class CatService {
     public static void getRandomCat(){
@@ -32,6 +35,7 @@ public class CatService {
                     break;
                 case 1:
                     favoriteCat(cat);
+                    getRandomCat();
                     break;
                 default:
                     break;
@@ -42,5 +46,34 @@ public class CatService {
         }
     }
 
-    private static void favoriteCat(Cat cat){}
+    private static void favoriteCat(Cat cat){
+        CatController.favoriteCat(cat.getId());
+    }
+
+    public static void seeRandomFavoriteCat(){
+        ArrayList<FavCat> cats = (ArrayList<FavCat>) CatController.getFavorites();
+        int iOption = -1;
+        while ((cats.size() > 0) && (iOption < 2)){
+            FavCat favCat = cats.get(NumericalUtils.randInt.apply(0, cats.size() - 1));
+            String menu = "Options:\n" +
+                    "1. See another favorite cat\n" +
+                    "2. Remove favorite\n" +
+                    "3. Go back\n";
+            String[] buttons = {"See another favorite cat", "Remove favorite", "Go back"};
+            String catId = favCat.getId();
+            String option = (String) JOptionPane.showInputDialog(
+                    null,
+                    menu,
+                    catId,
+                    JOptionPane.INFORMATION_MESSAGE,
+                    favCat.getImageIcon(),
+                    buttons,
+                    buttons[0]
+            );
+            for (int i = 0; i < buttons.length; i++) if (option.equals(buttons[i])) iOption = i;
+            if (iOption == 1) removeFavoriteCat(favCat);
+        }
+    }
+
+    private static void removeFavoriteCat(FavCat favCat){}
 }
