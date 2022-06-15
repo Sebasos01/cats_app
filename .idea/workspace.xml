@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e9cb27-c38c-4e3c-a724-cd15eb30c089" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/APIConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/APIConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/ImageX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/ImageX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PersonalUtils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PersonalUtils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/CatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/CatService.java" afterDir="false" />
-    </list>
+    <list default="true" id="04e9cb27-c38c-4e3c-a724-cd15eb30c089" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
