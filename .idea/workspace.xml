@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e9cb27-c38c-4e3c-a724-cd15eb30c089" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/FavCat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/ImageX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PersonalUtils/NumericalUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/APIConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/APIConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/CatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/CatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +66,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.View.Main">
+    <configuration name="NumericalUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PersonalUtils.NumericalUtils" />
+      <module name="cats_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PersonalUtils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StrongAES" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PersonalUtils.StrongAES" />
       <module name="cats_app" />
@@ -84,6 +102,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.View.Main" />
+        <item itemvalue="Application.NumericalUtils" />
         <item itemvalue="Application.StrongAES" />
       </list>
     </recent_temporary>
