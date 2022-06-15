@@ -62,7 +62,7 @@ public class CatController {
             String json = response.body().string();
             System.out.println("Json: " + json + "\n");
             Collections.addAll(cats, serializer.fromJson(json, FavCat[].class));
-            cats.forEach(favCat -> {favCat.setImageIcon(ImageUtils.resizeImage(favCat.getImage().getUrl()));});
+            cats.forEach(favCat -> favCat.setImageIcon(ImageUtils.resizeImage(favCat.getImage().getUrl())));
         } catch (IOException e) {
             e.printStackTrace();
         }

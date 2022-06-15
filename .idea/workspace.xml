@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e9cb27-c38c-4e3c-a724-cd15eb30c089" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/FavCat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/ImageX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PersonalUtils/NumericalUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/APIConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/APIConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/CatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/CatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
