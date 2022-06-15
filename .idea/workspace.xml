@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e9cb27-c38c-4e3c-a724-cd15eb30c089" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/APIConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/APIConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/ImageX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/ImageX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PersonalUtils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PersonalUtils/StringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/CatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/CatService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +91,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="cats_app" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="View.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="View.Main" />
       <module name="cats_app" />
@@ -96,6 +108,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.View.Main" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.NumericalUtils" />
         <item itemvalue="Application.StrongAES" />
       </list>

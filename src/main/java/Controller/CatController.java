@@ -14,13 +14,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class CatController {
     private final static String BASE_URL = "https://api.thecatapi.com/v1/";
     private final static String SEARCH_ENDPOINT = BASE_URL + "images/search";
     private final static String FAVORITE_ENDPOINT = BASE_URL + "favourites";
     private final static String FAVORITE_ENDPOINT2 = BASE_URL + "favourites?";
-    public final static byte[] KEY_PATH = {37, 17, 120, -54, -40, 63, -114, 108, 66, -13, 65, 16, -97, -110, -103, 111, 68, -112, -4, -117, -110, 123, 0, -56, 125, 58, 116, 42, 83, 118, -63, 74, -47, 89, 17, -11, -12, -69, 105, 119, -109, -111, 32, 26, -15, 100, -53, 1};
+    public final static String KEY_PATH = "37_17_120_-54_-40_63_-114_108_66_-13_65_16_-97_-110_-103_111_68_-112_-4_-117_-110_123_0_-56_125_58_116_42_83_118_-63_74_-47_89_17_-11_-12_-69_105_119_-109_-111_32_26_-15_100_-53_1";
     private final static APIConnection api = APIConnection.getInstance();
     private final static Gson serializer = new Gson();
 
@@ -45,7 +46,7 @@ public class CatController {
     public static void favoriteCat(String catId){
         String rBody = "{\n    \"image_id\": \"" + catId + "\"\n}";
         try {
-            Response response = APIConnection.getInstance().sendPostRequest(FAVORITE_ENDPOINT, rBody, FileUtils.getFirstLine(StrongAES.decrypt(KEY_PATH)));
+            Response response = APIConnection.getInstance().sendPostRequest(FAVORITE_ENDPOINT, rBody, getKey.get());
             System.out.println(response.toString());
             String json = response.body().string();
             System.out.println("Json: " + json + "\n");
@@ -57,7 +58,7 @@ public class CatController {
     public static List<FavCat> getFavorites(){
         ArrayList<FavCat> cats = new ArrayList<>();
         try {
-            Response response = APIConnection.getInstance().sendGetRequest2(FAVORITE_ENDPOINT2, FileUtils.getFirstLine(StrongAES.decrypt(KEY_PATH)));
+            Response response = APIConnection.getInstance().sendGetRequest2(FAVORITE_ENDPOINT2, getKey.get());
             System.out.println(response.toString());
             String json = response.body().string();
             System.out.println("Json: " + json + "\n");
@@ -68,4 +69,18 @@ public class CatController {
         }
         return cats;
     }
+
+    public static void removeFavoriteCat(String catId){
+        try {
+            Response response = APIConnection.getInstance().sendDeleteRequest(FAVORITE_ENDPOINT + "/" + catId, getKey.get());
+            System.out.println(response.toString());
+            String json = response.body().string();
+            System.out.println("Json: " + json + "\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static final Supplier<String> getKey = () ->
+            FileUtils.getFirstLine(StrongAES.decrypt(StringUtils.stringToBytes.apply(KEY_PATH, "_")));
 }

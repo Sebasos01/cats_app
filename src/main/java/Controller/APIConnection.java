@@ -26,7 +26,6 @@ public class APIConnection {
     }
 
     public Response sendGetRequest2(String rUrl, String apiKey) throws IOException {
-        RequestBody body = RequestBody.create(mediaType, "");
         Request request = new Request.Builder()
                 .url(rUrl)
                 .get()
@@ -41,6 +40,17 @@ public class APIConnection {
                 .url(fUrl)
                 .method("POST", body)
                 .addHeader("Content-Type", "application/json")
+                .addHeader("x-api-key", apiKey)
+                .build();
+        return client.newCall(request).execute();
+    }
+
+    public Response sendDeleteRequest(String dUrl, String apiKey) throws IOException {
+        RequestBody body = RequestBody.create(mediaType, "");
+        Request request = new Request.Builder()
+                .url(dUrl)
+                .method("DELETE", body)
+                .addHeader("Content-Type", mediaType.toString())
                 .addHeader("x-api-key", apiKey)
                 .build();
         return client.newCall(request).execute();

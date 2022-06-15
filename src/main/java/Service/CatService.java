@@ -52,8 +52,10 @@ public class CatService {
 
     public static void seeRandomFavoriteCat(){
         ArrayList<FavCat> cats = (ArrayList<FavCat>) CatController.getFavorites();
+        boolean flag = false;
         int iOption = -1;
         while ((cats.size() > 0) && (iOption < 2)){
+            if (flag) {cats = (ArrayList<FavCat>) CatController.getFavorites(); flag =  false;}
             FavCat favCat = cats.get(NumericalUtils.randInt.apply(0, cats.size() - 1));
             String menu = "Options:\n" +
                     "1. See another favorite cat\n" +
@@ -71,9 +73,9 @@ public class CatService {
                     buttons[0]
             );
             for (int i = 0; i < buttons.length; i++) if (option.equals(buttons[i])) iOption = i;
-            if (iOption == 1) removeFavoriteCat(favCat);
+            if (iOption == 1) {removeFavoriteCat(favCat); flag = true;}
         }
     }
 
-    private static void removeFavoriteCat(FavCat favCat){}
+    private static void removeFavoriteCat(FavCat favCat){ CatController.removeFavoriteCat(favCat.getId()); }
 }
